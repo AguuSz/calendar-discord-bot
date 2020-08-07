@@ -23,12 +23,13 @@ client.on('ready', () => {
 client.on('message', async message => {
   //Check bot ping
   if (message.content === '!ping') {
-    message.reply("pong");
+    // message.reply("pong");
   }
 
   // List events
   if (message.content === '!listar') {
-    let scheduledMessage = new cron.CronJob('* * 22 * * *', async () => {
+    let scheduledMessage = new cron.CronJob('* * 23 * * *', async () => {
+      message.channel.send("<@&741062874486538300>, el menu del dia");
       let events = await ListEvents(message);
       // message.channel.send(events);
     });
