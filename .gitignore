@@ -1,4 +1,1 @@
-keys_dev.js
-node_modules/
-package-lock.json
-token.json
+node_modules
