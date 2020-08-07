@@ -3,7 +3,9 @@ const readline = require('readline');
 const { google } = require('googleapis');
 const { credentials, calendarId } = require('./config/keys')
 
-if (!calendarId) calendarId = "primary"
+if (!calendarId){
+   calendarId = "primary"
+}
 
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/calendar'];
